@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CabprojectApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Printing Application....");
-		System.out.println("Pointing towards Solution....");
 		SpringApplication.run(CabprojectApplication.class, args);
 	}
 }

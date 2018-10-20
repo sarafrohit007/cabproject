@@ -8,5 +8,7 @@ import com.example.cabproject.rideestimates.IRideEstimateService;
 @Service
 @Qualifier("uberridesEstimatesImpl")
 public class UberridesEstimatesImpl implements IRideEstimateService{
+	
+	
 
 }

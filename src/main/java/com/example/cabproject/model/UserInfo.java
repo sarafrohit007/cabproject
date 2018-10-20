@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user_info",catalog="poolmaster")
+@Table(name="user_info",catalog="cabapp")
 public class UserInfo implements Serializable{
 
 	/**

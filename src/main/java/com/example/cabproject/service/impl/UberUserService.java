@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.example.cabproject.clientService.ICommuterclient;
+import com.example.cabproject.clientService.client.UberClient;
 import com.example.cabproject.service.IUserInformationService;
 
 @Service("uberUserService")
@@ -16,7 +17,7 @@ public class UberUserService implements IUserInformationService{
 	
 	@Override
 	public void getUserInfo() {
-		// TODO Auto-generated method stub
+		UberClient uberClient = (UberClient) commuterClient.returnClient("user.get.me");
 		
 	}
 

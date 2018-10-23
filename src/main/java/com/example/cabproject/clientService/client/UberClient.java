@@ -13,7 +13,9 @@ public class UberClient implements ICommuterclient{
 	@Override
 	public UberClient returnClient(String clientType) {
 		if(clientType.equals(ClientEnum.UBER_GET_ME.getUrlType())){
-			
+			return null;
+		}else if(clientType.equals(ClientEnum.UBER_PATCH_ME.getUrlType())){
+			return null;
 		}
 		return null;
 	}

@@ -27,54 +27,106 @@ public class UberClient implements ICommuterclient {
 		} else if (clientType.equals(ClientEnum.UBER_GET_PLACE_PLACEID.getUrlType())) {
 			return uberPlaceByPlaceIdClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_PRODUCTS.getUrlType())) {
-			return null;
+			return uberGetProductsClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_PRODUCTS_PRODUCTSID.getUrlType())) {
-			return null;
+			return uberGetProductsByProductIdClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_ESTIMATES_PRICE.getUrlType())) {
-			return null;
+			return uberGetEstimatesPriceClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_ESTIMATES_TIME.getUrlType())) {
-			return null;
+			return uberGetEstimatesTimeClient();
 		} else if (clientType.equals(ClientEnum.UBER_POST_REQUESTS_ESTIMATE.getUrlType())) {
-			return null;
+			return uberPostRequestEstimateClient();
 		} else if (clientType.equals(ClientEnum.UBER_POST_REQUESTS.getUrlType())) {
-			return null;
+			return uberPostRequestsClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_REQUESTS_CURRENT.getUrlType())) {
-			return null;
+			return uberGetRequestsCurrentClient();
 		} else if (clientType.equals(ClientEnum.UBER_PATCH_REQUESTS_CURRENT.getUrlType())) {
-			return null;
+			return uberPatchRequestsClient();
 		} else if (clientType.equals(ClientEnum.UBER_DELETE_REQUESTS_CURRENT.getUrlType())) {
-			return null;
+			return uberDeleteRequestsCurrentClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_REQUESTS_REQUESTID.getUrlType())) {
-			return null;
+			return uberGetRequestsByRequestIdClient();
 		} else if (clientType.equals(ClientEnum.UBER_PATCH_REQUESTS_REQUESTID.getUrlType())) {
-			return null;
+			return uberPatchRequestsByRequestIdClient();
 		} else if (clientType.equals(ClientEnum.UBER_DELETE_REQUESTS_REQUESTID.getUrlType())) {
-			return null;
+			return uberDeleteRequestsByRequestIdClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_REQUESTS_REQUESTID_MAP.getUrlType())) {
-			return null;
+			return uberGetRequestByRequestIdMapClient();
 		} else if (clientType.equals(ClientEnum.UBER_GET_REQUESTS_REQUESTID_RECIEPT.getUrlType())) {
-			return null;
+			return uberGetRequestsByRequestIdRecieptClient();
 		}
 		return null;
 	}
 
-	private UberClient uberPlaceByPlaceIdClient() {
+	private UberClient uberGetRequestsByRequestIdRecieptClient() {
+		return null;
+	}
 
+	private UberClient uberGetRequestByRequestIdMapClient() {
+		return null;
+	}
+
+	private UberClient uberDeleteRequestsByRequestIdClient() {
+		return null;
+	}
+
+	private UberClient uberPatchRequestsByRequestIdClient() {
+		return null;
+	}
+
+	private UberClient uberGetRequestsByRequestIdClient() {
+		return null;
+	}
+
+	private UberClient uberDeleteRequestsCurrentClient() {
+		return null;
+	}
+
+	private UberClient uberPatchRequestsClient() {
+		return null;
+	}
+
+	private UberClient uberGetRequestsCurrentClient() {
+		return null;
+	}
+
+	private UberClient uberPostRequestsClient() {
+		return null;
+	}
+
+	private UberClient uberPostRequestEstimateClient() {
+		return null;
+	}
+
+	private UberClient uberGetEstimatesTimeClient() {
+		return null;
+	}
+
+	private UberClient uberGetEstimatesPriceClient() {
+		return null;
+	}
+
+	private UberClient uberGetProductsByProductIdClient() {
+		return null;
+	}
+
+	private UberClient uberGetProductsClient() {
+		return null;
+	}
+
+	private UberClient uberPlaceByPlaceIdClient() {
 		return null;
 	}
 
 	private UberClient uberGetPaymentMethodsClient() {
-
 		return null;
 	}
 
 	private UberClient uberGetHistoryClient() {
-
 		return null;
 	}
 
 	private UberClient uberPatchMeClient() {
-
 		return null;
 	}
 

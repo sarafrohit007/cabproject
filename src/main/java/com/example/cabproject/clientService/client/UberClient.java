@@ -115,15 +115,52 @@ public class UberClient implements ICommuterclient {
 	}
 
 	private UberClient uberPlaceByPlaceIdClient() {
-		return null;
+		UberClient uberClient = new UberClient();
+		
+		OkHttpClient client = new OkHttpClient();
+
+		Request request = new Request.Builder()
+		  .url("https://api.uber.com/v1.2/places/work")
+		  .get()
+		  .addHeader("Authorization", "Bearer JA.VUNmGAAAAAAAEgASAAAABwAIAAwAAAAAAAAAEgAAAAAAAAG8AAAAFAAAAAAADgAQAAQAAAAIAAwAAAAOAAAAkAAAABwAAAAEAAAAEAAAABUrNf0LluC5tSgLhK_8CJlsAAAAoDPy9bWhloZ4ascGB5M22mOVkCqeXzRMVPpgFdV0dMDcwGSezmMq4DbtjNx8XJ8kB4iv3ppZQRHm2ENV--t5NG7HL7ilIMYKXmW9Yb9Io26AtJ_xlKdBOu4nV5_SP25rDtMen8PDmXZ86fzDDAAAAA9uzQZmzAO3Yqk7aSQAAABiMGQ4NTgwMy0zOGEwLTQyYjMtODA2ZS03YTRjZjhlMTk2ZWU")
+		  .addHeader("Accept-Language", "en_US")
+		  .addHeader("Content-Type", "application/json")
+		  .build();
+		uberClient.setOkHttpClient(client);
+		uberClient.setRequest(request);
+		return uberClient;
 	}
 
 	private UberClient uberGetPaymentMethodsClient() {
-		return null;
+		UberClient uberClient = new UberClient();
+		OkHttpClient client = new OkHttpClient();
+
+		Request request = new Request.Builder()
+		  .url("https://api.uber.com/v1.2/payment-methods")
+		  .get()
+		  .addHeader("Authorization", "Bearer JA.VUNmGAAAAAAAEgASAAAABwAIAAwAAAAAAAAAEgAAAAAAAAG8AAAAFAAAAAAADgAQAAQAAAAIAAwAAAAOAAAAkAAAABwAAAAEAAAAEAAAABUrNf0LluC5tSgLhK_8CJlsAAAAoDPy9bWhloZ4ascGB5M22mOVkCqeXzRMVPpgFdV0dMDcwGSezmMq4DbtjNx8XJ8kB4iv3ppZQRHm2ENV--t5NG7HL7ilIMYKXmW9Yb9Io26AtJ_xlKdBOu4nV5_SP25rDtMen8PDmXZ86fzDDAAAAA9uzQZmzAO3Yqk7aSQAAABiMGQ4NTgwMy0zOGEwLTQyYjMtODA2ZS03YTRjZjhlMTk2ZWU")
+		  .addHeader("Accept-Language", "en_US")
+		  .addHeader("Content-Type", "application/json")
+		  .build();
+		uberClient.setOkHttpClient(client);
+		uberClient.setRequest(request);
+		return uberClient;
 	}
 
 	private UberClient uberGetHistoryClient() {
-		return null;
+		UberClient uberClient = new UberClient();
+		OkHttpClient client = new OkHttpClient();
+
+		Request request = new Request.Builder()
+		  .url("https://api.uber.com/v1.2/history?offset=0&limit=15")
+		  .get()
+		  .addHeader("Authorization", "Bearer JA.VUNmGAAAAAAAEgASAAAABwAIAAwAAAAAAAAAEgAAAAAAAAG8AAAAFAAAAAAADgAQAAQAAAAIAAwAAAAOAAAAkAAAABwAAAAEAAAAEAAAABUrNf0LluC5tSgLhK_8CJlsAAAAoDPy9bWhloZ4ascGB5M22mOVkCqeXzRMVPpgFdV0dMDcwGSezmMq4DbtjNx8XJ8kB4iv3ppZQRHm2ENV--t5NG7HL7ilIMYKXmW9Yb9Io26AtJ_xlKdBOu4nV5_SP25rDtMen8PDmXZ86fzDDAAAAA9uzQZmzAO3Yqk7aSQAAABiMGQ4NTgwMy0zOGEwLTQyYjMtODA2ZS03YTRjZjhlMTk2ZWU")
+		  .addHeader("Accept-Language", "en_US")
+		  .addHeader("Content-Type", "application/json")
+		  .build();
+		uberClient.setOkHttpClient(client);
+		uberClient.setRequest(request);
+		return uberClient;
 	}
 
 	private UberClient uberPatchMeClient() {
@@ -133,16 +170,10 @@ public class UberClient implements ICommuterclient {
 	private UberClient uberGetMeClient() {
 		UberClient uberClient = new UberClient();
 		OkHttpClient client = new OkHttpClient();
-		com.squareup.okhttp.MediaType mediatype = com.squareup.okhttp.MediaType
-				.parse("application/x-www-form-urlencoded");
-		RequestBody body = RequestBody.create(mediatype, SystemConstants.CLIENT_SECRET_KEYWORD
-				+ "=65jmSOrfDS5WZvt7vLQ5L9KwKFE31rlg_LjfqOJi&" + SystemConstants.CLIENT_ID_KEYWORD
-				+ "=v5YmMO09lbssdRAnOBzB8h0b5G0uUWqd&" + SystemConstants.REDIRECT_URL_KEYWORD
-				+ "=https%3A%2F%2F01f58717.ngrok.io%3A443%2Fapi%2FfourthUrl&" + SystemConstants.GRANT_TYPE_KEYWORD
-				+ "=authorization_code&" + SystemConstants.CODE_KEYWORD + "=" + "");
-		Request request = new Request.Builder().url("https://login.uber.com/oauth/v2/token").post(body)
-				.addHeader("Content-Type", "application/x-www-form-urlencoded").addHeader("Cache-Control", "no-cache")
-				.build();
+		Request request = new Request.Builder().url("https://api.uber.com/v1.2/me").get()
+				.addHeader("Authorization",
+						"Bearer JA.VUNmGAAAAAAAEgASAAAABwAIAAwAAAAAAAAAEgAAAAAAAAG8AAAAFAAAAAAADgAQAAQAAAAIAAwAAAAOAAAAkAAAABwAAAAEAAAAEAAAABUrNf0LluC5tSgLhK_8CJlsAAAAoDPy9bWhloZ4ascGB5M22mOVkCqeXzRMVPpgFdV0dMDcwGSezmMq4DbtjNx8XJ8kB4iv3ppZQRHm2ENV--t5NG7HL7ilIMYKXmW9Yb9Io26AtJ_xlKdBOu4nV5_SP25rDtMen8PDmXZ86fzDDAAAAA9uzQZmzAO3Yqk7aSQAAABiMGQ4NTgwMy0zOGEwLTQyYjMtODA2ZS03YTRjZjhlMTk2ZWU")
+				.addHeader("Accept-Language", "en_US").addHeader("Content-Type", "application/json").build();
 		uberClient.setOkHttpClient(client);
 		uberClient.setRequest(request);
 		return uberClient;

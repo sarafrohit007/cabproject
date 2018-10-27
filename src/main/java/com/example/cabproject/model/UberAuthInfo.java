@@ -33,6 +33,8 @@ public class UberAuthInfo implements Serializable {
 	private Date issueDate;
 
 	private String expiresin;
+	
+	private String email;
 
 	public Integer getId() {
 		return id;
@@ -81,5 +83,22 @@ public class UberAuthInfo implements Serializable {
 	public void setExpiresin(String expiresin) {
 		this.expiresin = expiresin;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "UberAuthInfo [id=" + id + ", authToken=" + authToken + ", bearerToken=" + bearerToken
+				+ ", refreshToken=" + refreshToken + ", issueDate=" + issueDate + ", expiresin=" + expiresin
+				+ ", email=" + email + "]";
+	}
+	
+	
 
 }

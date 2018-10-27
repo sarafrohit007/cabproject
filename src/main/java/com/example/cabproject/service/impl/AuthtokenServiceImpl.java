@@ -82,7 +82,7 @@ public class AuthtokenServiceImpl implements IAuthTokenService{
 		//System.out.println("Printing uberResponse.... String"+responseUber.toString());
 		OkHttpClient client = new OkHttpClient();
 		com.squareup.okhttp.MediaType mediatype = com.squareup.okhttp.MediaType.parse("application/x-www-form-urlencoded");
-		RequestBody body = RequestBody.create(mediatype, "client_secret=65jmSOrfDS5WZvt7vLQ5L9KwKFE31rlg_LjfqOJi&client_id=v5YmMO09lbssdRAnOBzB8h0b5G0uUWqd&redirect_uri=https%3A%2F%2F01f58717.ngrok.io%3A443%2Fapi%2FfourthUrl&grant_type=authorization_code&code="+code);
+		RequestBody body = RequestBody.create(mediatype, "client_secret=65jmSOrfDS5WZvt7vLQ5L9KwKFE31rlg_LjfqOJi&client_id=v5YmMO09lbssdRAnOBzB8h0b5G0uUWqd&redirect_uri=https://8c4a3ce6.ngrok.io:443/api/fourthUrl&grant_type=authorization_code&code="+code);
 		Request request = new Request.Builder().url("https://login.uber.com/oauth/v2/token")
 				  .post(body)
 				  .addHeader("Content-Type", "application/x-www-form-urlencoded")

@@ -4,4 +4,6 @@ public interface IUserInformationService {
 
 	void getUserInfo();
 	
+	void getPlaceByPlaceType();
+	
 }

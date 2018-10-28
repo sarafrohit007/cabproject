@@ -6,7 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.cabproject.clientService.ICommuterclient;
 import com.example.cabproject.clientService.client.UberClient;
+import com.example.cabproject.dto.request.IClientRequest;
+import com.example.cabproject.dto.request.UberClientRequest;
 import com.example.cabproject.service.IUserInformationService;
+import com.example.cabproject.utils.SystemConstants;
 
 @Service("uberUserService")
 public class UberUserService implements IUserInformationService{
@@ -17,8 +20,14 @@ public class UberUserService implements IUserInformationService{
 	
 	@Override
 	public void getUserInfo() {
-		UberClient uberClient = (UberClient) commuterClient.returnClient("user.get.me");
-		
+		UberClientRequest uberClientRequest = new UberClientRequest();
+		UberClient uberClient = (UberClient) commuterClient.returnClient(SystemConstants.UBER_GET_ME_USER_KEYWORD,uberClientRequest);
+	}
+
+	@Override
+	public void getPlaceByPlaceType() {
+		UberClientRequest uberClientRequest = new UberClientRequest();
+		UberClient uberClient = (UberClient) commuterClient.returnClient("user.get.me",uberClientRequest);
 	}
 
 }

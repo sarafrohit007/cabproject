@@ -11,4 +11,9 @@ public interface SystemConstants {
 	String GRANT_TYPE_KEYWORD = "grant_type";
 	
 	String CODE_KEYWORD = "code";
+	
+	String UBER_GET_ME_USER_KEYWORD  = "user.get.me";
+	
+	String UBER_GET_PLACE_BY_PLACE_TYPE_KEYWORD = "uber.get.place.placeid";
+	
 }

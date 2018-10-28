@@ -11,7 +11,11 @@ public class OlaUserService implements IUserInformationService{
 
 	@Override
 	public void getUserInfo() {
-		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getPlaceByPlaceType() {
 		
 	}
 

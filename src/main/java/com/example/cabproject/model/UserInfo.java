@@ -35,6 +35,8 @@ public class UserInfo implements Serializable {
 
 	private OlaAuthInfo olaAuth;
 
+	private boolean registerdAsDriver;
+
 	public Integer getId() {
 		return id;
 	}
@@ -89,6 +91,14 @@ public class UserInfo implements Serializable {
 
 	public void setOlaAuth(OlaAuthInfo olaAuth) {
 		this.olaAuth = olaAuth;
+	}
+
+	public boolean isRegisterdAsDriver() {
+		return registerdAsDriver;
+	}
+
+	public void setRegisterdAsDriver(boolean registerdAsDriver) {
+		this.registerdAsDriver = registerdAsDriver;
 	}
 
 }
